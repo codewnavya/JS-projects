@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Switcher</title>
+    <style>
+        .colours{
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button{
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            /* text-align: center; */
+        }
+        h2,h1{
+            /* text-align: center; */
+        }
+            #pink{
+            background-color: pink;
+        }
+            #yellow{
+            background-color: yellow;
+        }
+            #green{
+            background: darkgreen;
+        }
+            #brown{
+            background-color: brown;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>Background Colour Switcher</h1>
+    <div class="colours">
+    <span class="button" id="pink"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="green"></span>
+    <span class="button" id="brown"></span><br><br>
+    </div>
+    <h2>Try clicking on any of the above colours to change the colour of the background ;)</h2>
+    <script>
+        const buttons = document.querySelectorAll('.button');
+        const body = document.querySelector("body")
+
+        buttons.forEach(function(button){
+        button.addEventListener('click', function(e){
+            console.log(e.target) 
+            if(e.target.id === "pink"){
+                body.style.backgroundColor = e.target.id;
+            }
+             if(e.target.id === "yellow"){
+                body.style.backgroundColor = e.target.id;
+            }
+             if(e.target.id === "green"){
+                body.style.backgroundColor = e.target.id;
+            }
+             if(e.target.id === "brown"){
+                body.style.backgroundColor = e.target.id;
+            }
+        })
+
+        }) 
+
+    </script>
+ </body>
+ </html>
