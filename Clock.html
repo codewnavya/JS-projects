@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+        .clock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* height: 100vh; */
+        }
+        #time{
+            font-size: 40px;
+            background-color: darksalmon;
+            padding: 20px 40px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <h1>Your Local Time</h1>
+        <div id="time"></div>
+    </div>
+    <script>
+        document.getElementById('time');
+        setInterval(function(){
+            let date = new Date();
+            time.innerHTML = date.toLocaleTimeString();
+        },1000) //1000 for every 1 second interval 
+    </script>
+</body>
+</html>
